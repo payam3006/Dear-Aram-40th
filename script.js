@@ -28,7 +28,7 @@ const showAddress = () => {
   document.getElementById("address").classList.add("show");
   setTimeout(function () {
     document.addEventListener("click", closeAddress);
-  }, 100);
+  }, 10);
 };
 
 const closeAddress = (event) => {
@@ -49,6 +49,7 @@ const flip = () => {
 
 const startPlay = function () {
   document.removeEventListener("click", startPlay);
+  box.classList.remove("hidden");
   playThat();
 };
 
