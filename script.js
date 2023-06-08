@@ -23,6 +23,19 @@ const pauseThat = () => {
   document.getElementById("pause").classList.add("hidden");
 };
 
+const showAddress = () => {
+  document.getElementById("address").classList.remove("addHide");
+};
+
+const closeAddress = () => {
+  document.getElementById("address").classList.add("addHide");
+};
+
+const flip = () => {
+  document.getElementById("front").classList.toggle("hideCard");
+  document.getElementById("back").classList.toggle("hideCard");
+};
+
 window.onload = function () {
   audio.play();
 };

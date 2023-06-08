@@ -23,12 +23,12 @@
 
     <div class="main part">
         <div class="container">
-            <div class="front">
+            <div id="front" class="front" onclick="flip()">
                 <img class="card" src="/images/aram.jpg" alt="">
                 <img class="note" src="./images/zendegi.png" alt="">
                 <i class="fa fa-refresh"></i>
             </div>
-            <div class="back">
+            <div id="back" class="back hideCard" onclick="flip()">
                 <img class="candle" src="./images/Candle.jpg" alt="">
                 <img class="sakht" src="./images/sakht.png" alt="">
                 <img class="hanooz" src="./images/hanooz.png" alt="">
@@ -38,10 +38,18 @@
 
     </div>
 
-    <div class="address">
+    <div id="address" class="address addHide">
         <img class="map" src="./images/map.png" alt="">
-        <div class="closeBtn">
+        <div class="closeBtn" onclick="closeAddress()">
             <i class="fa fa-close"></i>
+        </div>
+        <div class="navigateTo">
+            <div class="button">
+
+            </div>
+            <div class="button">
+
+            </div>
         </div>
     </div>
 
