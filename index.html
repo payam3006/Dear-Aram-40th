@@ -12,7 +12,7 @@
 </head>
 
 <body>
-    <audio id="audio" muted="muted">
+    <audio id="audio">
         <source src="./voices/Aram.mp3" type="audio/mpeg">
     </audio>
 
@@ -22,13 +22,13 @@
     </div>
 
     <div class="main part">
-        <div class="container">
+        <div id="container" class="container">
             <div id="front" class="front" onclick="flip()">
                 <img class="card" src="/images/aram.jpg" alt="">
                 <img class="note" src="./images/zendegi.png" alt="">
                 <i class="fa fa-refresh"></i>
             </div>
-            <div id="back" class="back hideCard" onclick="flip()">
+            <div id="back" class="back" onclick="flip()">
                 <img class="candle" src="./images/Candle.jpg" alt="">
                 <img class="sakht" src="./images/sakht.png" alt="">
                 <img class="hanooz" src="./images/hanooz.png" alt="">
@@ -55,10 +55,10 @@
 
     <div class="bottom part">
         <div class="bar">
-            <div id="pause" class="button" onclick="pauseThat()">
-                <i class="fa fa-pause"></i>
+            <div id="pause" class="button hidden" onclick="pauseThat()">
+                <i class="fa fa-pause "></i>
             </div>
-            <div id="play" class="button hidden" onclick="playThat()">
+            <div id="play" class="button" onclick="playThat()">
                 d<i class="fa fa-play"></i>
             </div>
             <div id="showAddress" class="button" onclick="showAddress()">

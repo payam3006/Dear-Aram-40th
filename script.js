@@ -24,20 +24,48 @@ const pauseThat = () => {
 };
 
 const showAddress = () => {
+  IsAddressOpen = true;
   document.getElementById("address").classList.remove("addHide");
 };
 
 const closeAddress = () => {
   document.getElementById("address").classList.add("addHide");
+  IsAddressOpen = false;
 };
 
 const flip = () => {
-  document.getElementById("front").classList.toggle("hideCard");
-  document.getElementById("back").classList.toggle("hideCard");
+  document.getElementById("container").classList.toggle("hideCard");
+  //   document.getElementById("back").classList.toggle("hideCard");
 };
 
-window.onload = function () {
-  audio.play();
+const startPlay = function () {
+  document.removeEventListener("click", startPlay);
+  playThat();
 };
 
-// audio.play();
+document.addEventListener("click", startPlay);
+
+// function closeAddress0(event) {
+//   const elem = document.getElementById("address");
+//   //   console.log(event.target.is(elem));
+//   console.log(event.target);
+// }
+
+// document.addEventListener("click", closeAddress0);
+// // audio.play();
+
+const box = document.getElementById("address");
+
+const isAddressOpen = () => {
+  return !box.classList.contains("addHide");
+};
+
+// IsAddressOpen = false;
+
+document.addEventListener("click", (event) => {
+  if (isAddressOpen()) {
+    if (!box.contains(event.target)) {
+      closeAddress();
+    }
+  }
+});
