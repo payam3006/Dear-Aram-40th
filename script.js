@@ -25,7 +25,7 @@ const pauseThat = () => {
 };
 
 const showAddress = () => {
-  document.getElementById("address").classList.remove("addHide");
+  document.getElementById("address").classList.add("show");
   setTimeout(function () {
     document.addEventListener("click", closeAddress);
   }, 100);
@@ -38,7 +38,7 @@ const closeAddress = (event) => {
 };
 
 const closeAddress0 = () => {
-  document.getElementById("address").classList.add("addHide");
+  document.getElementById("address").classList.remove("show");
   document.removeEventListener("click", closeAddress);
 };
 
