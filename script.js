@@ -1,6 +1,7 @@
 const audio = document.getElementById("audio");
+const box = document.getElementById("address");
 
-console.log(audio.autoplay);
+// console.log(audio.autoplay);
 
 // setInterval(checkTreckFinished, 100);
 
@@ -24,13 +25,21 @@ const pauseThat = () => {
 };
 
 const showAddress = () => {
-  IsAddressOpen = true;
   document.getElementById("address").classList.remove("addHide");
+  setTimeout(function () {
+    document.addEventListener("click", closeAddress);
+  }, 100);
 };
 
-const closeAddress = () => {
+const closeAddress = (event) => {
+  if (!box.contains(event.target)) {
+    closeAddress0();
+  }
+};
+
+const closeAddress0 = () => {
   document.getElementById("address").classList.add("addHide");
-  IsAddressOpen = false;
+  document.removeEventListener("click", closeAddress);
 };
 
 const flip = () => {
@@ -44,28 +53,3 @@ const startPlay = function () {
 };
 
 document.addEventListener("click", startPlay);
-
-// function closeAddress0(event) {
-//   const elem = document.getElementById("address");
-//   //   console.log(event.target.is(elem));
-//   console.log(event.target);
-// }
-
-// document.addEventListener("click", closeAddress0);
-// // audio.play();
-
-const box = document.getElementById("address");
-
-const isAddressOpen = () => {
-  return !box.classList.contains("addHide");
-};
-
-// IsAddressOpen = false;
-
-document.addEventListener("click", (event) => {
-  if (isAddressOpen()) {
-    if (!box.contains(event.target)) {
-      closeAddress();
-    }
-  }
-});
