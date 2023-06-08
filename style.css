@@ -165,7 +165,10 @@ COP!!!*/
 
 .navigateTo {
   display: flex;
-  margin: 40px;
+  margin: 30px;
+}
+
+.time {
 }
 
 .fa-refresh {
