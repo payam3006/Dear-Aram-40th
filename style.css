@@ -75,16 +75,17 @@ COP!!!*/
 }
 
 .front {
-  transition: 0.6s;
+  transition: 0.8s;
 }
 
 .hideCard {
   z-index: -1;
-  scale: 0 1;
+  transform: rotateY(180deg);
 }
 
 .container {
   position: relative;
+  /* perspective: 1000px; */
 }
 
 .note {
@@ -105,7 +106,7 @@ COP!!!*/
   border: 5px solid #8c8c8c;
   border-radius: 10px;
   /* filter: drop-shadow(0px 0px 5px white); */
-  transition: 0.6s;
+  transition: 0.8s;
 }
 
 .candle {
