@@ -1,0 +1,231 @@
+:root {
+  /*use 100vh for mobile responsive
+  COP!!!*/
+  --doc-height: 100%;
+}
+
+body {
+  /*use 100vh for mobile responsive
+COP!!!*/
+  height: 100vh; /* fallback for Js load */
+  height: var(--doc-height);
+
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background-color: black;
+  margin: 0;
+  padding: 0;
+  height: 100vh;
+  background-image: url("./images/night.jpg");
+  background-size: cover;
+  backdrop-filter: blur(3px) brightness(30%);
+}
+
+.part {
+  width: 100vw;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.up {
+  /* background-color: bisque; */
+  position: absolute;
+  top: 0;
+}
+
+.main {
+  z-index: 2;
+  /* background-color: black; */
+}
+
+.bottom {
+  position: absolute;
+  bottom: 0;
+  background-image: url("./images/night-bottom.jpg");
+  /* background-size: cover; */
+}
+
+.bar {
+  height: 20vh;
+  width: 100vw;
+  backdrop-filter: blur(3px) brightness(30%);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.enna {
+  object-fit: contain;
+  width: calc(min(50vw, 250px));
+  height: 20vh;
+}
+
+.card {
+  width: calc(max(60vw, 350px));
+  height: calc(max(60vh, 300px));
+  border: 5px solid #8c8c8c;
+  border-radius: 10px;
+  object-fit: cover;
+  cursor: pointer;
+}
+
+.container {
+  position: relative;
+}
+
+.note {
+  z-index: 3;
+  position: absolute;
+  right: 0;
+  width: 70%;
+}
+
+.back {
+  background-color: black;
+  z-index: 3;
+  height: calc(100% - 10px);
+  width: calc(100% - 10px);
+  position: absolute;
+  bottom: 0;
+  cursor: pointer;
+  border: 5px solid #8c8c8c;
+  border-radius: 10px;
+}
+
+.candle {
+  position: absolute;
+  max-height: 100%;
+}
+
+.sakht {
+  position: absolute;
+  width: 100%;
+}
+
+.hanooz {
+  position: absolute;
+  right: 0;
+  width: 90%;
+  bottom: 0;
+}
+
+.address {
+  z-index: 4;
+  width: calc(max(95vw, 300px));
+  position: absolute;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background-color: #b5b5b5;
+  border-radius: 5px;
+}
+
+.map {
+  width: 90%;
+  border-radius: 5px;
+  margin: 50px;
+}
+
+.fa-refresh {
+  position: absolute;
+  right: 15px;
+  bottom: 15px;
+  cursor: pointer;
+}
+
+.closeBtn {
+  position: absolute;
+  top: 5px;
+}
+
+.button {
+  cursor: pointer;
+  width: 50px;
+  height: 50px;
+  margin: 0 10px;
+  border-radius: 50%;
+  background-color: #b5b5b5;
+  color: #b5b5b5;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: 2px solid gray;
+}
+
+.button:active {
+  opacity: 70%;
+}
+
+.fa {
+  font-size: 30px;
+  color: #464646;
+}
+
+.hidden {
+  display: none;
+}
+
+@media only screen and (min-width: 1000px) {
+  .card {
+    height: calc(max(70vh, 300px));
+  }
+  .enna {
+    height: 15vh;
+  }
+  .bar {
+    height: 15vh;
+  }
+  .sakht {
+    right: 0;
+    width: 70%;
+  }
+  .hanooz {
+    width: 60%;
+  }
+}
+
+@media only screen and (max-width: 1000px) {
+  .note {
+    width: 80%;
+    top: 4%;
+  }
+  .candle {
+    width: 20%;
+    bottom: 0;
+  }
+}
+
+@media only screen and (min-width: 650px) {
+  .sakht {
+    right: 0;
+    width: 90%;
+  }
+  .hanooz {
+    width: 80%;
+  }
+}
+
+@media only screen and (min-width: 800px) {
+  .sakht {
+    right: 0;
+    width: 80%;
+  }
+  .hanooz {
+    width: 70%;
+  }
+}
+
+@media only screen and (min-width: 1100px) {
+  .sakht {
+    right: 0;
+    width: 60%;
+  }
+  .hanooz {
+    width: 50%;
+  }
+}
