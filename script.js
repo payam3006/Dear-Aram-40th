@@ -3,7 +3,7 @@ const box = document.getElementById("address");
 
 // console.log(audio.autoplay);
 
-// setInterval(checkTreckFinished, 100);
+setInterval(checkTreckFinished, 100);
 
 function checkTreckFinished() {
   if (audio.currentTime >= audio.duration) {
